@@ -1,6 +1,7 @@
+import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import React from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity } from "react-native";
 
 export default function Index() {
   const router = useRouter();
@@ -13,7 +14,10 @@ export default function Index() {
   }
 
   return (
-    <View style={styles.container}>
+    <LinearGradient
+      colors={["#e6f2ff", "#ffffff"]}
+      style={styles.container}
+    >
       <TouchableOpacity onPress={() => router.navigate("/booking")}>
         {logo ? (
           <Image source={logo} style={styles.image} />
@@ -21,11 +25,11 @@ export default function Index() {
           <Text>Logo not found</Text>
         )}
       </TouchableOpacity>
-    </View>
+    </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#fff" },
+  container: { flex: 1, justifyContent: "center", alignItems: "center" },
   image: { width: 150, height: 150, resizeMode: "contain" },
 });
