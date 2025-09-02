@@ -8,7 +8,7 @@ export default function Index() {
 
   let logo;
   try {
-    logo = require("../assets/images/logo.avif");
+    logo = require("../assets/images/logo.jpg");
   } catch (e) {
     logo = null;
   }

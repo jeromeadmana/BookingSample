@@ -2,13 +2,13 @@ import DateTimePicker from "@react-native-community/datetimepicker";
 import { Picker } from "@react-native-picker/picker";
 import React, { useMemo, useState } from "react";
 import {
-    Image,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from "react-native";
 
 type BedSize = "single" | "singleLong" | "queen" | "kingSingle" | "double" | "king";
@@ -100,7 +100,7 @@ export default function Booking() {
     <ScrollView style={styles.container}>
       {/* Logo */}
       <View style={styles.logoContainer}>
-        <Image source={require("../assets/images/logo.avif")} style={styles.logo} />
+        <Image source={require("../assets/images/logo.jpg")} style={styles.logo} />
       </View>
 
       {/* Contact Details */}
